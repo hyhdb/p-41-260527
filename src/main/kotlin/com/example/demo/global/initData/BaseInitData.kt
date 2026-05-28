@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Profile
 import org.springframework.transaction.annotation.Transactional
 
 @Configuration
-@Profile("!Prod")
 class BaseInitData(
     private val postService: PostService
 ) {
@@ -33,10 +32,9 @@ class BaseInitData(
         postService.write("제목 1", "내용 1")
         postService.write("제목 2", "내용 2")
 
-        self.get1Plus1()
-        self.get1Plus1()
-        self.get1Plus1()
-
+        self.get1Plus1() // get1Plus1 run!
+        self.get1Plus1() //
+        self.get1Plus1() //
     }
 
     @Cacheable("get1Plus1")
