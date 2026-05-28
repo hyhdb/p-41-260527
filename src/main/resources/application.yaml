@@ -6,7 +6,7 @@ spring:
     redis:
       port: 36379
   application:
-    name: back-260527
+    name: demo1
   profiles:
     active: dev
     include: secret
@@ -50,7 +50,7 @@ custom:
     backUrl: "http://${custom.dev.domain}:${server.port}"
     frontUrl: "http://${custom.dev.domain}:3000"
   prod:
-    domain: hyhdb.shop
+    domain: api.hyhdb.shop
     backUrl: "https://api.${custom.prod.domain}"
     frontUrl: "https://www.${custom.prod.domain}"
   site:
